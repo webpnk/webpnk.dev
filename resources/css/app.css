@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .btn {
+        @apply flex items-center gap-x-2 rounded-lg px-6 py-2.5 text-lg max-sm:text-xl
+            disabled:cursor-not-allowed disabled:grayscale
+            bg-neon-carrot font-semibold text-black
+            border-neon-carrot-700 border-2
+            shadow-[0_3px_0_0_#F7A501,0_5px_0_0_#936201]
+            hover:translate-y-[1px] hover:shadow-[0_2px_0_0_#B77702,0_4px_0_0_#936201]
+            active:translate-y-[2px] active:shadow-[0_0_0_0_#B77702,0_3px_0_0_#936201]
+            transition-all duration-150;
+    }
+}
