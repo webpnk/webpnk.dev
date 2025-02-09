@@ -5,7 +5,7 @@ import { FaCode, FaFolder, FaTwitter, FaUser } from 'react-icons/fa';
 
 const tabs = [
     { name: 'General Info', icon: <FaUser size={20} />, href: '/' },
-    { name: 'Skills', icon: <FaCode size={20} />, href: '/education' },
+    { name: 'Skills', icon: <FaCode size={20} />, href: '/skills' },
     {
         name: 'Project History',
         icon: <FaFolder size={20} />,

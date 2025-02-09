@@ -7,6 +7,6 @@ Route::get('/', function () {
     return Inertia::render('Welcome');
 });
 
-Route::get('/education', function () {
-    return Inertia::render('Education');
+Route::get('/skills', function () {
+    return Inertia::render('Skills');
 });
