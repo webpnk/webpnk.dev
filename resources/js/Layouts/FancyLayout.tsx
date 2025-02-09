@@ -1,13 +1,17 @@
 import { Tab, Tabs } from '@heroui/tabs';
 import { Link, usePage } from '@inertiajs/react';
 import { PropsWithChildren } from 'react';
-import { FaFolder, FaGraduationCap, FaTwitter, FaUser } from 'react-icons/fa';
+import { FaCode, FaFolder, FaTwitter, FaUser } from 'react-icons/fa';
 
 const tabs = [
-    { name: 'General Info', icon: <FaUser />, href: '/' },
-    { name: 'Education', icon: <FaGraduationCap />, href: '/education' },
-    { name: 'Project History', icon: <FaFolder />, href: '/projects' },
-    { name: 'Tweets', icon: <FaTwitter />, href: '/tweets' },
+    { name: 'General Info', icon: <FaUser size={20} />, href: '/' },
+    { name: 'Skills', icon: <FaCode size={20} />, href: '/education' },
+    {
+        name: 'Project History',
+        icon: <FaFolder size={20} />,
+        href: '/projects',
+    },
+    { name: 'Tweets', icon: <FaTwitter size={20} />, href: '/tweets' },
 ];
 
 export default function FancyLayout({ children }: PropsWithChildren) {

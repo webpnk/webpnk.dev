@@ -3,8 +3,8 @@ import FancyLayout from '@/Layouts/FancyLayout';
 import { motion } from 'framer-motion';
 import { FaFilePdf, FaGithub, FaLinkedin } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
+import graduate from '../../images/graduate.png';
 import me from '../../images/me.gif';
-import planet from '../../images/planet.png';
 import pug from '../../images/pug.png';
 import ship from '../../images/ship.png';
 import wise from '../../images/wise.png';
@@ -69,24 +69,6 @@ export default function Welcome() {
                 </div>
                 <div className="grid w-full grid-cols-1 gap-x-8 px-4 md:grid-cols-4">
                     <FeatureCard
-                        className="-rotate-3"
-                        heading={
-                            <>
-                                📍Based in{' '}
-                                <span className="text-red-700">Ukraine</span>
-                            </>
-                        }
-                        image={
-                            <motion.img
-                                initial={{ rotate: -3, scale: 1.4 }}
-                                whileHover={{ rotate: 0, scale: 1.6 }}
-                                src={planet}
-                                alt="Location"
-                                className="mt-6 w-full"
-                            />
-                        }
-                    />
-                    <FeatureCard
                         className="rotate-2 border-pink-700 bg-pink-300"
                         heading={
                             <>
@@ -101,6 +83,28 @@ export default function Welcome() {
                                 src={wise}
                                 alt="Location"
                                 className="mt-4 w-full"
+                            />
+                        }
+                    />
+
+                    <FeatureCard
+                        className="-rotate-3 border-yellow-700 bg-yellow-200"
+                        heading={
+                            <>
+                                Master's Degree in{' '}
+                                <span className="text-yellow-800">CS</span>
+                            </>
+                        }
+                        image={
+                            <motion.img
+                                initial={{
+                                    rotate: -3,
+                                    scale: 1.4,
+                                }}
+                                whileHover={{ rotate: 0, scale: 1.6 }}
+                                src={graduate}
+                                alt="Graduate"
+                                className="mt-6 w-full"
                             />
                         }
                     />
