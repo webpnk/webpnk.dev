@@ -105,7 +105,7 @@ const TechCard = ({
         <motion.div
             whileHover={{ scale: 1.02 }}
             className={twMerge(
-                `${color} rounded-xl border-2 p-6 ${borderColor}`,
+                `${color} rounded-xl border-2 p-6 ${borderColor} shadow-lg`,
                 'motion-preset-bounce',
                 motionDelay,
                 className,

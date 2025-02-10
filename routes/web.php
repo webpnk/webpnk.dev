@@ -10,3 +10,7 @@ Route::get('/', function () {
 Route::get('/skills', function () {
     return Inertia::render('Skills');
 });
+
+Route::get('/my-work', function () {
+    return Inertia::render('Work');
+});

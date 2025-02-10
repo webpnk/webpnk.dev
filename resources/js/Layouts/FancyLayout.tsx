@@ -1,15 +1,15 @@
 import { Tab, Tabs } from '@heroui/tabs';
 import { Link, usePage } from '@inertiajs/react';
 import { PropsWithChildren } from 'react';
-import { FaCode, FaFolder, FaTwitter, FaUser } from 'react-icons/fa';
+import { FaCode, FaCompass, FaTwitter, FaUser } from 'react-icons/fa';
 
 const tabs = [
     { name: 'General Info', icon: <FaUser size={20} />, href: '/' },
     { name: 'Skills', icon: <FaCode size={20} />, href: '/skills' },
     {
-        name: 'Project History',
-        icon: <FaFolder size={20} />,
-        href: '/projects',
+        name: 'My Work',
+        icon: <FaCompass size={20} />,
+        href: '/my-work',
     },
     { name: 'Tweets', icon: <FaTwitter size={20} />, href: '/tweets' },
 ];
