@@ -14,3 +14,5 @@ Route::get('/skills', function () {
 Route::get('/my-work', function () {
     return Inertia::render('Work');
 });
+
+Route::get('/tweets', \App\Http\Controllers\TweetsController::class);
