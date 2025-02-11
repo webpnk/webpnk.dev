@@ -1,5 +1,6 @@
 import LazyVideo from '@/Components/LazyVideo';
 import FancyLayout from '@/Layouts/FancyLayout';
+import { Head } from '@inertiajs/react';
 import { motion } from 'framer-motion';
 import { ComponentProps } from 'react';
 import { FaAsterisk, FaExternalLinkAlt } from 'react-icons/fa';
@@ -284,6 +285,9 @@ const projects: ProjectProps[] = [
 export default function Work() {
     return (
         <FancyLayout>
+            <Head>
+                <title>My Work</title>
+            </Head>
             <h1 className="mb-24 text-6xl font-extrabold">
                 Experience &{' '}
                 <span className="text-neon-carrot-500">Projects</span>

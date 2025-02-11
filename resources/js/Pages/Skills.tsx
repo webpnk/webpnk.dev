@@ -7,6 +7,7 @@ import Tailwind from '@/Components/Icons/Tailwind';
 import Typescript from '@/Components/Icons/Typescript';
 import Vercel from '@/Components/Icons/Vercel';
 import FancyLayout from '@/Layouts/FancyLayout';
+import { Head } from '@inertiajs/react';
 import { motion } from 'framer-motion';
 import { ComponentProps, useMemo } from 'react';
 import { twMerge } from 'tailwind-merge';
@@ -124,6 +125,9 @@ const TechCard = ({
 export default function Skills() {
     return (
         <FancyLayout>
+            <Head>
+                <title>My Skills & Tech Stack</title>
+            </Head>
             <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
                 {technologies.map((tech, index) => (
                     <TechCard className="" key={index} {...tech} />

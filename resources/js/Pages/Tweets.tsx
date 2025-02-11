@@ -1,6 +1,6 @@
 import FancyLayout from '@/Layouts/FancyLayout';
 import { PageProps } from '@/types';
-import { WhenVisible } from '@inertiajs/react';
+import { Head, WhenVisible } from '@inertiajs/react';
 import { FaTwitter } from 'react-icons/fa';
 import { Tweet } from 'react-tweet';
 
@@ -27,6 +27,9 @@ function LoadingTweets() {
 export default function Tweets({ tweets, meta }: PageProps<TweetsProps>) {
     return (
         <FancyLayout>
+            <Head>
+                <title>My Tweets</title>
+            </Head>
             <h1 className="mb-6 text-center text-6xl font-extrabold">
                 <span className="text-neon-carrot-500">Tweets</span> I'm happy
                 with

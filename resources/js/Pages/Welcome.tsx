@@ -1,5 +1,6 @@
 import FeatureCard from '@/Components/FeatureCard';
 import FancyLayout from '@/Layouts/FancyLayout';
+import { Head } from '@inertiajs/react';
 import { motion } from 'framer-motion';
 import { FaFilePdf, FaGithub, FaLinkedin } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
@@ -12,6 +13,9 @@ import wise from '../../images/wise.webp';
 export default function Welcome({ cvUrl }: { cvUrl: string }) {
     return (
         <FancyLayout>
+            <Head>
+                <title>Dmytro Shatrov</title>
+            </Head>
             <div className="flex flex-col items-center">
                 <div className="/max-w-5xl mb-16 flex w-full flex-col items-start px-8">
                     <div className="flex w-full items-center justify-between">
