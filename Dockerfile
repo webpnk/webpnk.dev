@@ -3,6 +3,8 @@ FROM php:8.3-fpm-alpine
 
 ENV COMPOSER_ALLOW_SUPERUSER 1
 
+RUN apk upgrade
+
 # Install necessary dependencies
 RUN apk add --no-cache \
     curl \

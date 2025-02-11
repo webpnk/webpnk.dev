@@ -37,18 +37,18 @@ services:
             - webpnk-network
         command: --default-authentication-plugin=mysql_native_password
 
-#    ssr:
-#        build:
-#            context: .
-#        volumes:
-#            - ./:/var/www
-#        command: [ "php", "/var/www/artisan", "inertia:start-ssr" ]
-#        stop_signal: SIGTERM
-#        healthcheck:
-#            test: [ "CMD", "php", "/var/www/artisan", "ssr:healthcheck" ]
-#            start_period: 3600s
-#        networks:
-#            - letmename-network
+    ssr:
+        build:
+            context: .
+        volumes:
+            - ./:/var/www
+        command: [ "php", "/var/www/artisan", "inertia:start-ssr" ]
+        stop_signal: SIGTERM
+        healthcheck:
+            test: [ "CMD", "php", "/var/www/artisan", "ssr:healthcheck" ]
+            start_period: 3600s
+        networks:
+            - webpnk-network
 
     queue:
         build:
