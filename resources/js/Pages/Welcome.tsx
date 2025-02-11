@@ -3,11 +3,11 @@ import FancyLayout from '@/Layouts/FancyLayout';
 import { motion } from 'framer-motion';
 import { FaFilePdf, FaGithub, FaLinkedin } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
-import graduate from '../../images/graduate.png';
-import me from '../../images/me.gif';
-import pug from '../../images/pug.png';
-import ship from '../../images/ship.png';
-import wise from '../../images/wise.png';
+import graduate from '../../images/graduate.webp';
+import me from '../../images/me.webp';
+import pug from '../../images/pug.webp';
+import ship from '../../images/ship.webp';
+import wise from '../../images/wise.webp';
 
 export default function Welcome() {
     return (
