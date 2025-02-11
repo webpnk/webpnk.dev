@@ -9,7 +9,7 @@ import Vercel from '@/Components/Icons/Vercel';
 import FancyLayout from '@/Layouts/FancyLayout';
 import { Head } from '@inertiajs/react';
 import { motion } from 'framer-motion';
-import { ComponentProps, useMemo } from 'react';
+import { ComponentProps, ReactNode, useMemo } from 'react';
 import { twMerge } from 'tailwind-merge';
 
 interface TechCardProps {
@@ -107,32 +107,36 @@ const TechCard = ({
             whileHover={{ scale: 1.02 }}
             className={twMerge(
                 `${color} rounded-xl border-2 p-6 ${borderColor} shadow-lg`,
-                'motion-preset-bounce',
+                'sm:motion-preset-bounce max-sm:motion-preset-stretch-lg motion-loop-once motion-duration-300',
                 motionDelay,
                 className,
             )}
             {...props}
         >
             <div className="flex flex-col items-center gap-4 text-center">
-                <div className="text-6xl">{icon}</div>
-                <h3 className="text-2xl font-bold">{title}</h3>
-                <p className="text-gray-700">{description}</p>
+                <div className="text-6xl max-sm:text-8xl">{icon}</div>
+                <h3 className="text-2xl font-bold max-sm:text-4xl">{title}</h3>
+                <p className="text-gray-700 max-sm:text-2xl">{description}</p>
             </div>
         </motion.div>
     );
 };
 
-export default function Skills() {
+const Skills = () => {
     return (
-        <FancyLayout>
+        <>
             <Head>
                 <title>My Skills & Tech Stack</title>
             </Head>
-            <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
+            <div className="grid grid-cols-1 gap-6 max-sm:px-4 md:grid-cols-2 lg:grid-cols-4">
                 {technologies.map((tech, index) => (
                     <TechCard className="" key={index} {...tech} />
                 ))}
             </div>
-        </FancyLayout>
+        </>
     );
-}
+};
+
+Skills.layout = (page: ReactNode) => <FancyLayout>{page}</FancyLayout>;
+
+export default Skills;

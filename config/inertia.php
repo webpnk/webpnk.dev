@@ -21,7 +21,7 @@ return [
 
     'ssr' => [
 
-        'enabled' => true,
+        'enabled' => env('SSR_ENABLE', true),
 
         'url' => env('SSR_URL', 'http://ssr:13714'),
 

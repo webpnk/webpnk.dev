@@ -19,34 +19,40 @@ export default function FancyLayout({ children }: PropsWithChildren) {
 
     return (
         <div className="mx-auto min-h-screen max-w-[1200px] pb-20">
-            <div className="mx-auto flex flex-col items-center justify-center gap-y-8 px-4 py-4 pb-16 sm:px-6 lg:px-8">
-                <Tabs
-                    selectedKey={path}
-                    aria-label="Options"
-                    classNames={{
-                        tabList: 'py-4 bg-transparent',
-                        tab: 'btn data-[selected]:bg-white data-[hover]:opacity-100 px-6 py-5',
-                        tabContent: 'text-neon-carrot-900 text-medium',
-                    }}
-                    disableAnimation
-                >
-                    {tabs.map((t) => (
-                        <Tab
-                            as={Link}
-                            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-                            // @ts-expect-error
-                            prefetch="mount"
-                            key={t.href}
-                            href={t.href}
-                            title={
-                                <div className="flex items-center space-x-2">
-                                    {t.icon}
-                                    <span>{t.name}</span>
-                                </div>
-                            }
-                        />
-                    ))}
-                </Tabs>
+            <div className="mx-auto flex flex-col items-center justify-center gap-y-8 px-4 py-4 pb-16 max-sm:px-0 sm:pl-6 lg:px-8">
+                <div className="scrollbar-hide flex w-full justify-center overflow-x-auto max-sm:justify-start">
+                    {/*<div className="min-w-fit">*/}
+                    <Tabs
+                        selectedKey={path}
+                        aria-label="Options"
+                        classNames={{
+                            tabList:
+                                'py-4 bg-transparent flex-nowrap max-sm:px-4 max-sm:motion-preset-wobble-sm max-sm:-motion-translate-x-loop-[20px] max-sm:motion-delay-500 max-sm:motion-loop-twice',
+                            tab: 'btn data-[selected]:bg-white data-[hover]:opacity-100 px-6 py-5 whitespace-nowrap',
+                            tabContent:
+                                'text-neon-carrot-900 text-medium max-sm:text-xl',
+                        }}
+                        disableAnimation
+                    >
+                        {tabs.map((t) => (
+                            <Tab
+                                as={Link}
+                                // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+                                // @ts-expect-error
+                                prefetch="mount"
+                                key={t.href}
+                                href={t.href}
+                                title={
+                                    <div className="flex items-center space-x-2">
+                                        {t.icon}
+                                        <span>{t.name}</span>
+                                    </div>
+                                }
+                            />
+                        ))}
+                    </Tabs>
+                    {/*</div>*/}
+                </div>
             </div>
 
             {children}

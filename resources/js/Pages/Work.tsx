@@ -2,7 +2,7 @@ import LazyVideo from '@/Components/LazyVideo';
 import FancyLayout from '@/Layouts/FancyLayout';
 import { Head } from '@inertiajs/react';
 import { motion } from 'framer-motion';
-import { ComponentProps } from 'react';
+import { ComponentProps, ReactNode } from 'react';
 import { FaAsterisk, FaExternalLinkAlt } from 'react-icons/fa';
 import { twMerge } from 'tailwind-merge';
 import chartsDemo from '../../assets/charts/demo.mp4';
@@ -67,13 +67,15 @@ const Project = ({
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         className={twMerge(
-            'grid grid-cols-1 items-start gap-16 lg:grid-cols-2',
+            'grid grid-cols-1 items-start gap-x-16 lg:grid-cols-2',
             className,
         )}
         {...props}
     >
         <div className="flex flex-col justify-center">
-            <h2 className="mb-6 text-5xl font-bold text-gray-800">{title}</h2>
+            <h2 className="mb-6 line-clamp-1 break-words text-5xl font-bold text-gray-800">
+                {title}
+            </h2>
             <p className="mb-4 text-xl text-gray-600">{description}</p>
             {longDescription && (
                 <p className="mb-8 text-lg text-gray-500">{longDescription}</p>
@@ -111,7 +113,7 @@ const Project = ({
                     href={url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn btn-secondary self-start"
+                    className="btn btn-secondary self-start max-sm:mb-8"
                 >
                     View Project
                     <FaExternalLinkAlt size={14} />
@@ -121,7 +123,7 @@ const Project = ({
 
         <div className="flex flex-col gap-8">
             {video && (
-                <div className="flex flex-col gap-2">
+                <div className="flex flex-col gap-2 max-sm:hidden">
                     <LazyVideo
                         src={video}
                         className="h-full w-full object-cover"
@@ -279,25 +281,28 @@ const projects: ProjectProps[] = [
             position: 'VP of Engineering',
         },
     },
-    // Add more projects...
 ];
 
-export default function Work() {
+const Work = () => {
     return (
-        <FancyLayout>
+        <>
             <Head>
                 <title>My Work</title>
             </Head>
-            <h1 className="mb-24 text-6xl font-extrabold">
+            <h1 className="mb-24 text-6xl font-extrabold max-sm:px-4">
                 Experience &{' '}
                 <span className="text-neon-carrot-500">Projects</span>
             </h1>
 
-            <div className="flex flex-col gap-y-20">
+            <div className="flex flex-col gap-y-20 max-sm:px-4">
                 {projects.map((project, index) => (
                     <Project key={index} {...project} />
                 ))}
             </div>
-        </FancyLayout>
+        </>
     );
-}
+};
+
+Work.layout = (page: ReactNode) => <FancyLayout>{page}</FancyLayout>;
+
+export default Work;

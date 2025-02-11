@@ -1,5 +1,6 @@
 import { heroui } from '@heroui/theme';
 import forms from '@tailwindcss/forms';
+import twScrollbarHide from 'tailwind-scrollbar-hide';
 import motion from 'tailwindcss-motion';
 import defaultTheme from 'tailwindcss/defaultTheme';
 
@@ -37,5 +38,5 @@ export default {
         },
     },
 
-    plugins: [forms, heroui(), motion],
+    plugins: [forms, heroui(), motion, twScrollbarHide],
 };

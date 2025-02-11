@@ -2,6 +2,7 @@ import FeatureCard from '@/Components/FeatureCard';
 import FancyLayout from '@/Layouts/FancyLayout';
 import { Head } from '@inertiajs/react';
 import { motion } from 'framer-motion';
+import { ReactNode } from 'react';
 import { FaFilePdf, FaGithub, FaLinkedin } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 import graduate from '../../images/graduate.webp';
@@ -10,36 +11,44 @@ import pug from '../../images/pug.webp';
 import ship from '../../images/ship.webp';
 import wise from '../../images/wise.webp';
 
-export default function Welcome({ cvUrl }: { cvUrl: string }) {
+const Welcome = ({ cvUrl }: { cvUrl: string }) => {
     return (
-        <FancyLayout>
+        <>
             <Head>
                 <title>Dmytro Shatrov</title>
             </Head>
             <div className="flex flex-col items-center">
-                <div className="/max-w-5xl mb-16 flex w-full flex-col items-start px-8">
-                    <div className="flex w-full items-center justify-between">
-                        <div className="max-w-2xl text-gray-800">
-                            <p className="motion-preset-shake mb-4 text-2xl text-gray-500">
+                <div className="mb-16 flex w-full flex-col items-start px-4 sm:px-8">
+                    <div className="flex w-full flex-col items-center gap-8 lg:flex-row lg:items-start lg:justify-between">
+                        <div className="max-w-2xl text-center max-sm:flex max-sm:flex-col max-sm:items-center lg:text-left">
+                            <p className="motion-preset-shake mb-4 text-xl text-gray-500 sm:text-2xl">
                                 Hey there 👋
                             </p>
 
-                            <h1 className="mb-4 text-6xl font-extrabold">
+                            <h1 className="mb-4 text-4xl font-extrabold sm:text-6xl">
                                 I'm{' '}
                                 <span className="text-neon-carrot-500">
                                     Dmytro Shatrov
                                 </span>
                             </h1>
-                            <h2 className="mb-6 text-4xl font-bold">
+                            <h2 className="mb-6 text-2xl font-bold sm:text-4xl">
                                 a Software Engineer who{' '}
                                 <span className="text-fuchsia-500">cares</span>
                             </h2>
 
-                            <div className="flex items-center gap-6">
+                            <div className="ring-neon-carrot-700 mb-6 aspect-square h-60 overflow-hidden rounded-full bg-indigo-50 ring-4 ring-offset-4 sm:hidden">
+                                <img
+                                    src={me}
+                                    alt="Dmytro Shatrov"
+                                    className="motion-rotate-in-[360deg] motion-ease-spring-bouncier h-full w-full object-cover"
+                                />
+                            </div>
+
+                            <div className="flex flex-col items-center gap-6 sm:flex-row">
                                 <a
                                     href={cvUrl}
                                     target="_blank"
-                                    className="btn"
+                                    className="btn w-full sm:w-auto"
                                     rel="noreferrer"
                                 >
                                     <FaFilePdf /> Download CV
@@ -73,7 +82,7 @@ export default function Welcome({ cvUrl }: { cvUrl: string }) {
                                 </div>
                             </div>
                         </div>
-                        <div className="ring-neon-carrot-700 aspect-square h-80 overflow-hidden rounded-full bg-indigo-50 ring-4 ring-offset-4">
+                        <div className="ring-neon-carrot-700 aspect-square h-60 overflow-hidden rounded-full bg-indigo-50 ring-4 ring-offset-4 max-sm:hidden sm:h-80">
                             <img
                                 src={me}
                                 alt="Dmytro Shatrov"
@@ -82,7 +91,7 @@ export default function Welcome({ cvUrl }: { cvUrl: string }) {
                         </div>
                     </div>
                 </div>
-                <div className="grid w-full grid-cols-1 gap-x-8 px-4 md:grid-cols-4">
+                <div className="grid w-full grid-cols-1 gap-8 px-4 max-sm:px-12 sm:grid-cols-2 lg:grid-cols-4">
                     <FeatureCard
                         className="rotate-2 border-pink-700 bg-pink-300"
                         heading={
@@ -167,6 +176,10 @@ export default function Welcome({ cvUrl }: { cvUrl: string }) {
                     />
                 </div>
             </div>
-        </FancyLayout>
+        </>
     );
-}
+};
+
+Welcome.layout = (page: ReactNode) => <FancyLayout>{page}</FancyLayout>;
+
+export default Welcome;

@@ -42,7 +42,7 @@ Let others learn more about me, my tech stack, demonstrate project showcases, an
 ## 📋 TODO
 
 - [ ] 🔧 Get rid of hardcode
-- [ ] 📱 Responsive design
+- [x] 📱 Responsive design
 - [ ] 💻 Add Filament PHP admin panel to manage content
 
 ## 🚀 Getting Started
