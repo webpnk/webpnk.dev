@@ -1,10 +1,15 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Storage;
 use Inertia\Inertia;
 
 Route::get('/', function () {
-    return Inertia::render('Welcome');
+    $cvUrl = Storage::url('CV Dmytro Shatrov (upd Feb 2025).pdf');
+
+    return Inertia::render('Welcome', [
+        'cvUrl' => $cvUrl,
+    ]);
 });
 
 Route::get('/skills', function () {

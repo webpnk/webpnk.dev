@@ -9,7 +9,7 @@ import pug from '../../images/pug.webp';
 import ship from '../../images/ship.webp';
 import wise from '../../images/wise.webp';
 
-export default function Welcome() {
+export default function Welcome({ cvUrl }: { cvUrl: string }) {
     return (
         <FancyLayout>
             <div className="flex flex-col items-center">
@@ -32,9 +32,14 @@ export default function Welcome() {
                             </h2>
 
                             <div className="flex items-center gap-6">
-                                <button className="btn">
+                                <a
+                                    href={cvUrl}
+                                    target="_blank"
+                                    className="btn"
+                                    rel="noreferrer"
+                                >
                                     <FaFilePdf /> Download CV
-                                </button>
+                                </a>
 
                                 <div className="flex items-center gap-3">
                                     <a
