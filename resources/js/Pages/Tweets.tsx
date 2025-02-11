@@ -31,7 +31,7 @@ export default function Tweets({ tweets, meta }: PageProps<TweetsProps>) {
                 <span className="text-neon-carrot-500">Tweets</span> I'm happy
                 with
             </h1>
-            <p className="mb-12 text-center text-xl text-gray-600">
+            <p className="motion-preset-confetti mb-12 text-center text-xl text-gray-600">
                 My Posts I think speak best for me 🥵
             </p>
 

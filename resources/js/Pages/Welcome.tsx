@@ -38,19 +38,25 @@ export default function Welcome() {
 
                                 <div className="flex items-center gap-3">
                                     <a
-                                        href="#"
+                                        href="https://x.com/webpnk_dev"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
                                         className="text-gray-700 transition-opacity hover:opacity-90"
                                     >
                                         <FaXTwitter size={32} />
                                     </a>
                                     <a
-                                        href="#"
+                                        href="https://www.linkedin.com/in/tommyromanhater/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
                                         className="text-gray-700 transition-opacity hover:opacity-90"
                                     >
                                         <FaLinkedin size={32} />
                                     </a>
                                     <a
-                                        href="#"
+                                        href="https://github.com/webpnk"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
                                         className="text-gray-700 transition-opacity hover:opacity-90"
                                     >
                                         <FaGithub size={32} />
