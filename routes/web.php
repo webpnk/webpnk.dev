@@ -5,11 +5,7 @@ use Illuminate\Support\Facades\Storage;
 use Inertia\Inertia;
 
 Route::get('/', function () {
-    $cvUrl = Storage::url('CV Dmytro Shatrov (upd Feb 2025).pdf');
-
-    return Inertia::render('Welcome', [
-        'cvUrl' => $cvUrl,
-    ]);
+    return Inertia::render('Welcome');
 });
 
 Route::get('/skills', function () {
@@ -21,3 +17,13 @@ Route::get('/my-work', function () {
 });
 
 Route::get('/tweets', \App\Http\Controllers\TweetsController::class);
+
+Route::get('/cv', function () {
+    $file = Storage::path('CV Dmytro Shatrov (upd Feb 2025).pdf');
+
+    if (!file_exists($file)) {
+        abort(404);
+    }
+
+    return response()->download($file);
+});

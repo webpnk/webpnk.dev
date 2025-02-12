@@ -11,7 +11,7 @@ import pug from '../../images/pug.webp';
 import ship from '../../images/ship.webp';
 import wise from '../../images/wise.webp';
 
-const Welcome = ({ cvUrl }: { cvUrl: string }) => {
+const Welcome = () => {
     return (
         <>
             <Head>
@@ -46,8 +46,7 @@ const Welcome = ({ cvUrl }: { cvUrl: string }) => {
 
                             <div className="flex flex-col items-center gap-6 sm:flex-row">
                                 <a
-                                    href={cvUrl}
-                                    target="_blank"
+                                    href="/cv"
                                     className="btn w-full sm:w-auto"
                                     rel="noreferrer"
                                 >
