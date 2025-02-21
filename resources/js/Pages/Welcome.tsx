@@ -36,11 +36,11 @@ const Welcome = () => {
                                 <span className="text-fuchsia-500">cares</span>
                             </h2>
 
-                            <div className="ring-neon-carrot-700 mb-6 aspect-square h-60 overflow-hidden rounded-full bg-indigo-50 ring-4 ring-offset-4 sm:hidden">
+                            <div className="mb-6 aspect-square h-60 overflow-hidden rounded-full bg-indigo-50 ring-4 ring-neon-carrot-700 ring-offset-4 sm:hidden">
                                 <img
                                     src={me}
                                     alt="Dmytro Shatrov"
-                                    className="motion-rotate-in-[360deg] motion-ease-spring-bouncier h-full w-full object-cover"
+                                    className="h-full w-full object-cover motion-rotate-in-[360deg] motion-ease-spring-bouncier"
                                 />
                             </div>
 
@@ -63,7 +63,7 @@ const Welcome = () => {
                                         <FaXTwitter size={32} />
                                     </a>
                                     <a
-                                        href="https://www.linkedin.com/in/tommyromanhater/"
+                                        href="https://www.linkedin.com/in/dshatrovua/"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="text-gray-700 transition-opacity hover:opacity-90"
@@ -81,11 +81,11 @@ const Welcome = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="ring-neon-carrot-700 aspect-square h-60 overflow-hidden rounded-full bg-indigo-50 ring-4 ring-offset-4 max-sm:hidden sm:h-80">
+                        <div className="aspect-square h-60 overflow-hidden rounded-full bg-indigo-50 ring-4 ring-neon-carrot-700 ring-offset-4 max-sm:hidden sm:h-80">
                             <img
                                 src={me}
                                 alt="Dmytro Shatrov"
-                                className="motion-rotate-in-[360deg] motion-ease-spring-bouncier h-full w-full object-cover"
+                                className="h-full w-full object-cover motion-rotate-in-[360deg] motion-ease-spring-bouncier"
                             />
                         </div>
                     </div>
