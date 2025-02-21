@@ -33,6 +33,12 @@
         @viteReactRefresh
         @vite(['resources/js/app.tsx', "resources/js/Pages/{$page['component']}.tsx"])
         @inertiaHead
+
+        <script
+            defer
+            src="https://assets.onedollarstats.com/stonks.js"
+            id="stonks" >
+        </script>
     </head>
     <body class="font-sans antialiased">
         @inertia
