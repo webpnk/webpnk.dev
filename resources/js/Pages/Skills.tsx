@@ -7,9 +7,10 @@ import Tailwind from '@/Components/Icons/Tailwind';
 import Typescript from '@/Components/Icons/Typescript';
 import Vercel from '@/Components/Icons/Vercel';
 import FancyLayout from '@/Layouts/FancyLayout';
-import { Head } from '@inertiajs/react';
+import { Head, Link } from '@inertiajs/react';
 import { motion } from 'framer-motion';
 import { ComponentProps, ReactNode, useMemo } from 'react';
+import { FaEnvelope, FaSuitcase } from 'react-icons/fa';
 import { twMerge } from 'tailwind-merge';
 
 interface TechCardProps {
@@ -107,7 +108,7 @@ const TechCard = ({
             whileHover={{ scale: 1.02 }}
             className={twMerge(
                 `${color} rounded-xl border-2 p-6 ${borderColor} shadow-lg`,
-                'sm:motion-preset-bounce max-sm:motion-preset-stretch-lg motion-loop-once motion-duration-300',
+                'motion-duration-300 motion-loop-once max-sm:motion-preset-stretch-lg sm:motion-preset-bounce',
                 motionDelay,
                 className,
             )}
@@ -128,10 +129,32 @@ const Skills = () => {
             <Head>
                 <title>My Skills & Tech Stack</title>
             </Head>
-            <div className="grid grid-cols-1 gap-6 max-sm:px-4 md:grid-cols-2 lg:grid-cols-4">
-                {technologies.map((tech, index) => (
-                    <TechCard className="" key={index} {...tech} />
-                ))}
+            <div className="w-full">
+                <h2 className="mb-16 text-center text-6xl font-extrabold">
+                    Things I'm really{' '}
+                    <span className="text-neon-carrot">strong at</span>
+                </h2>
+
+                <div className="mb-16 grid grid-cols-1 gap-6 max-sm:px-4 md:grid-cols-2 lg:grid-cols-4">
+                    {technologies.map((tech, index) => (
+                        <TechCard className="" key={index} {...tech} />
+                    ))}
+                </div>
+
+                <div className="flex w-full justify-center gap-x-4">
+                    <Link className="btn text-2xl" href="/my-work">
+                        <FaSuitcase />
+                        See my work
+                    </Link>
+
+                    <a
+                        className="btn btn-secondary text-2xl"
+                        href="mailto:webpnk.dev@gmail.com"
+                    >
+                        <FaEnvelope />
+                        Contact Me!
+                    </a>
+                </div>
             </div>
         </>
     );

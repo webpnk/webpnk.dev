@@ -3,7 +3,7 @@ import FancyLayout from '@/Layouts/FancyLayout';
 import { Head } from '@inertiajs/react';
 import { motion } from 'framer-motion';
 import { ComponentProps, ReactNode } from 'react';
-import { FaAsterisk, FaExternalLinkAlt } from 'react-icons/fa';
+import { FaAsterisk, FaEnvelope, FaExternalLinkAlt } from 'react-icons/fa';
 import { twMerge } from 'tailwind-merge';
 import chartsDemo from '../../assets/charts/demo.mp4';
 import earneoDemo from '../../assets/earneo/demo.mp4';
@@ -144,9 +144,9 @@ const Project = ({
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     viewport={{ once: true }}
-                    className="border-neon-carrot flex flex-col justify-center rounded-xl border-4 bg-gray-800 p-8"
+                    className="flex flex-col justify-center rounded-xl border-4 border-neon-carrot bg-gray-800 p-8"
                 >
-                    <p className="border-l-neon-carrot mb-6 border-l-4 pl-3 text-xl font-extrabold leading-relaxed text-white">
+                    <p className="mb-6 border-l-4 border-l-neon-carrot pl-3 text-xl font-extrabold leading-relaxed text-white">
                         {feedback.text.map((segment, index) => (
                             <span
                                 key={index}
@@ -294,10 +294,20 @@ const Work = () => {
                 <span className="text-neon-carrot-500">Projects</span>
             </h1>
 
-            <div className="flex flex-col gap-y-20 max-sm:px-4">
+            <div className="mb-16 flex flex-col gap-y-20 max-sm:px-4">
                 {projects.map((project, index) => (
                     <Project key={index} {...project} />
                 ))}
+            </div>
+
+            <div className="flex w-full justify-center gap-x-4">
+                <a
+                    className="btn btn-secondary text-2xl"
+                    href="mailto:webpnk.dev@gmail.com"
+                >
+                    <FaEnvelope />
+                    Contact Me!
+                </a>
             </div>
         </>
     );

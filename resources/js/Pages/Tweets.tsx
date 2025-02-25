@@ -45,6 +45,7 @@ const Tweets = ({ tweets, meta }: PageProps<TweetsProps>) => {
                     {tweets.map((tweet) => (
                         <div
                             key={tweet.tweet_id}
+                            data-tweet-id={tweet.tweet_id}
                             className="flex justify-center"
                             data-theme="light"
                         >

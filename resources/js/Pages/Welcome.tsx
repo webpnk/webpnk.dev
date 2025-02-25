@@ -1,15 +1,19 @@
-import FeatureCard from '@/Components/FeatureCard';
+import Deploy from '@/Components/Cards/Deploy';
+import Student from '@/Components/Cards/Student';
+import TechStack from '@/Components/Cards/TechStack';
+import Wizard from '@/Components/Cards/Wizard';
 import FancyLayout from '@/Layouts/FancyLayout';
-import { Head } from '@inertiajs/react';
-import { motion } from 'framer-motion';
+import { Head, Link } from '@inertiajs/react';
 import { ReactNode } from 'react';
-import { FaFilePdf, FaGithub, FaLinkedin } from 'react-icons/fa';
+import {
+    FaCode,
+    FaEnvelope,
+    FaFilePdf,
+    FaGithub,
+    FaLinkedin,
+} from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
-import graduate from '../../images/graduate.webp';
 import me from '../../images/me.webp';
-import pug from '../../images/pug.webp';
-import ship from '../../images/ship.webp';
-import wise from '../../images/wise.webp';
 
 const Welcome = () => {
     return (
@@ -17,7 +21,7 @@ const Welcome = () => {
             <Head>
                 <title>Dmytro Shatrov</title>
             </Head>
-            <div className="flex flex-col items-center">
+            <div className="flex flex-col items-center gap-y-16">
                 <div className="mb-16 flex w-full flex-col items-start px-4 sm:px-8">
                     <div className="flex w-full flex-col items-center gap-8 lg:flex-row lg:items-start lg:justify-between">
                         <div className="max-w-2xl text-center max-sm:flex max-sm:flex-col max-sm:items-center lg:text-left">
@@ -90,89 +94,45 @@ const Welcome = () => {
                         </div>
                     </div>
                 </div>
-                <div className="grid w-full grid-cols-1 gap-8 px-4 max-sm:px-12 sm:grid-cols-2 lg:grid-cols-4">
-                    <FeatureCard
-                        className="rotate-2 border-pink-700 bg-pink-300"
-                        heading={
-                            <>
-                                <span className="text-pink-700">10 years</span>{' '}
-                                in web development
-                            </>
-                        }
-                        image={
-                            <motion.img
-                                initial={{ rotate: -3, scale: 1.2 }}
-                                whileHover={{ rotate: 0, scale: 1.4 }}
-                                src={wise}
-                                alt="Location"
-                                className="mt-4 w-full"
-                            />
-                        }
-                    />
 
-                    <FeatureCard
-                        className="-rotate-3 border-yellow-700 bg-yellow-200"
-                        heading={
-                            <>
-                                Master's Degree in{' '}
-                                <span className="text-yellow-800">CS</span>
-                            </>
-                        }
-                        image={
-                            <motion.img
-                                initial={{
-                                    rotate: -3,
-                                    scale: 1.4,
-                                }}
-                                whileHover={{ rotate: 0, scale: 1.6 }}
-                                src={graduate}
-                                alt="Graduate"
-                                className="mt-6 w-full"
-                            />
-                        }
-                    />
+                <div className="w-full">
+                    <h2 className="mb-16 text-center text-6xl font-extrabold">
+                        Why you probably should{' '}
+                        <span className="text-neon-carrot">hire me</span>
+                    </h2>
 
-                    <FeatureCard
-                        className="-rotate-1 border-lime-700 bg-lime-200"
-                        heading={
-                            <>
-                                <span className="text-lime-900">
-                                    Ultimate expert with
-                                </span>{' '}
-                                Laravel, React, Next.js
-                            </>
-                        }
-                        image={
-                            <motion.img
-                                initial={{ rotate: -3 }}
-                                whileHover={{ rotate: 0, scale: 1.2 }}
-                                src={pug}
-                                alt="Location"
-                                className="w-full"
-                            />
-                        }
-                    />
+                    <div className="mx-auto mb-16 grid w-full max-w-5xl grid-cols-1 gap-6 px-4 sm:grid-cols-6 lg:grid-cols-12">
+                        <div className="col-span-full sm:col-span-4 lg:col-span-5">
+                            <Student />
+                        </div>
 
-                    <FeatureCard
-                        className="rotate-[4deg] border-fuchsia-700 bg-fuchsia-200"
-                        heading={
-                            <>
-                                Shipping to{' '}
-                                <span className="text-fuchsia-900">
-                                    AWS, Vercel, Cloudflare, VPS
-                                </span>{' '}
-                            </>
-                        }
-                        image={
-                            <motion.img
-                                initial={{ rotate: -3, scale: 1.2 }}
-                                whileHover={{ rotate: 0, scale: 1.4 }}
-                                src={ship}
-                                alt="Location"
-                                className="w-full"
-                            />
-                        }
-                    />
+                        <div className="col-span-full sm:col-span-2 lg:col-span-7">
+                            <Wizard />
+                        </div>
+
+                        <div className="col-span-full sm:col-span-3 lg:col-span-7">
+                            <TechStack />
+                        </div>
+
+                        <div className="col-span-full sm:col-span-3 lg:col-span-5">
+                            <Deploy />
+                        </div>
+                    </div>
+
+                    <div className="flex w-full justify-center gap-x-4">
+                        <Link className="btn text-2xl" href="/skills">
+                            <FaCode />
+                            Explore my skills
+                        </Link>
+
+                        <a
+                            className="btn btn-secondary text-2xl"
+                            href="mailto:webpnk.dev@gmail.com"
+                        >
+                            <FaEnvelope />
+                            Contact Me!
+                        </a>
+                    </div>
                 </div>
             </div>
         </>

@@ -12,13 +12,13 @@ class TweetsController extends Controller
     private const int PER_PAGE = 3;
 
     private const array TWEETS = [
+        ['tweet_id' => '1891620370366578839'],
+        ['tweet_id' => '1890115596521701826'],
         ['tweet_id' => '1888996916253335681'],
         ['tweet_id' => '1888911475453903042'],
         ['tweet_id' => '1888910450626007054'],
         ['tweet_id' => '1887636517520134294'],
         ['tweet_id' => '1886822648346255609'],
-        ['tweet_id' => '1885107303277342990'],
-        ['tweet_id' => '1884334202415349978'],
         ['tweet_id' => '1884233588465623300'],
         ['tweet_id' => '1883874424451219643'],
         ['tweet_id' => '1882188844906520968'],

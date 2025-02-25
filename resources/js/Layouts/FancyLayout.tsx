@@ -20,7 +20,7 @@ export default function FancyLayout({ children }: PropsWithChildren) {
     return (
         <div className="mx-auto min-h-screen max-w-[1200px] pb-20">
             <div className="mx-auto flex flex-col items-center justify-center gap-y-8 px-4 py-4 pb-16 max-sm:px-0 sm:pl-6 lg:px-8">
-                <div className="scrollbar-hide flex w-full justify-center overflow-x-auto max-sm:justify-start">
+                <div className="flex w-full justify-center overflow-x-auto scrollbar-hide max-sm:justify-start">
                     {/*<div className="min-w-fit">*/}
                     <Tabs
                         selectedKey={path}

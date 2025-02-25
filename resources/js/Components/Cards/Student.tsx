@@ -1,0 +1,53 @@
+import { motion } from 'framer-motion';
+import graduate from '../../../images/graduate.webp';
+
+const cardVariants = {
+    initial: {
+        scale: 1,
+    },
+    hover: {
+        scale: 1.05,
+    },
+};
+
+const imageVariants = {
+    initial: {
+        scale: 1,
+    },
+    hover: {
+        scale: 1.04,
+    },
+};
+
+export default function Student() {
+    return (
+        <motion.div
+            variants={cardVariants}
+            initial="initial"
+            whileHover="hover"
+            transition={{ type: 'spring' }}
+            className="group relative h-full origin-bottom-right rounded-3xl bg-gradient-to-br from-violet-500/90 to-violet-600/90 p-6 text-white"
+        >
+            <div>
+                <h3 className="mb-3 text-4xl font-bold">Education</h3>
+                <p className="text-2xl font-semibold text-violet-100">
+                    Master Degree
+                </p>
+                <p className="text-2xl font-semibold text-violet-100">
+                    in{' '}
+                    <span className="text-neon-carrot-200">
+                        Computer Science
+                    </span>
+                </p>
+            </div>
+
+            <motion.img
+                variants={imageVariants}
+                transition={{ type: 'spring' }}
+                src={graduate}
+                alt="Education"
+                className="absolute -bottom-[24px] right-0 h-72 w-48 origin-bottom object-cover drop-shadow-xl"
+            />
+        </motion.div>
+    );
+}
