@@ -49,7 +49,7 @@ export default function Deploy() {
                 src={ship}
                 alt="Shipping"
                 className={twMerge(
-                    'w-54 absolute -right-[16px] -top-[80px] h-72 origin-bottom object-cover drop-shadow-xl',
+                    'w-54 absolute -right-[16px] -top-[80px] h-72 origin-bottom object-cover drop-shadow-xl max-sm:hidden',
                 )}
             />
         </motion.div>

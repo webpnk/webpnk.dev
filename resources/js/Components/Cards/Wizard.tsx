@@ -58,7 +58,7 @@ export default function Wizard() {
                 variants={imageVariants}
                 src={wise}
                 alt="Experience"
-                className="absolute -bottom-[36px] -right-[24px] w-80 origin-bottom object-cover drop-shadow-xl"
+                className="absolute -bottom-[36px] -right-[24px] w-80 origin-bottom object-cover drop-shadow-xl max-sm:hidden"
             />
         </motion.div>
     );

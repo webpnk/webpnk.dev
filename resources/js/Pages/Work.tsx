@@ -300,7 +300,7 @@ const Work = () => {
                 ))}
             </div>
 
-            <div className="flex w-full justify-center gap-x-4">
+            <div className="flex w-full justify-center gap-x-4 max-sm:flex-col max-sm:gap-y-4 max-sm:px-2">
                 <a
                     className="btn btn-secondary text-2xl"
                     href="mailto:webpnk.dev@gmail.com"

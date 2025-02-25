@@ -141,7 +141,7 @@ const Skills = () => {
                     ))}
                 </div>
 
-                <div className="flex w-full justify-center gap-x-4">
+                <div className="flex w-full justify-center gap-x-4 max-sm:flex-col max-sm:gap-y-4 max-sm:px-2">
                     <Link className="btn text-2xl" href="/my-work">
                         <FaSuitcase />
                         See my work

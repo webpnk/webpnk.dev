@@ -33,9 +33,9 @@ export default function Student() {
                 <p className="text-2xl font-semibold text-violet-100">
                     Master Degree
                 </p>
-                <p className="text-2xl font-semibold text-violet-100">
+                <p className="text-2xl font-semibold text-violet-100 sm:max-w-36 lg:max-w-none">
                     in{' '}
-                    <span className="text-neon-carrot-200">
+                    <span className="break-words text-neon-carrot-200">
                         Computer Science
                     </span>
                 </p>
@@ -46,7 +46,7 @@ export default function Student() {
                 transition={{ type: 'spring' }}
                 src={graduate}
                 alt="Education"
-                className="absolute -bottom-[24px] right-0 h-72 w-48 origin-bottom object-cover drop-shadow-xl"
+                className="absolute right-0 origin-bottom object-cover drop-shadow-xl max-sm:hidden sm:-bottom-[18px] sm:h-56 sm:w-32 lg:-bottom-[24px] lg:h-72 lg:w-48"
             />
         </motion.div>
     );

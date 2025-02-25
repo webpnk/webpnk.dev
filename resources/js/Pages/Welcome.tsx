@@ -101,12 +101,12 @@ const Welcome = () => {
                         <span className="text-neon-carrot">hire me</span>
                     </h2>
 
-                    <div className="mx-auto mb-16 grid w-full max-w-5xl grid-cols-1 gap-6 px-4 sm:grid-cols-6 lg:grid-cols-12">
-                        <div className="col-span-full sm:col-span-4 lg:col-span-5">
+                    <div className="mx-auto mb-16 grid w-full max-w-5xl grid-cols-1 gap-2 px-2 sm:grid-cols-6 sm:px-8 lg:grid-cols-12 lg:gap-6 lg:px-4">
+                        <div className="col-span-full sm:col-span-2 lg:col-span-5">
                             <Student />
                         </div>
 
-                        <div className="col-span-full sm:col-span-2 lg:col-span-7">
+                        <div className="col-span-full sm:col-span-4 lg:col-span-7">
                             <Wizard />
                         </div>
 
@@ -119,7 +119,7 @@ const Welcome = () => {
                         </div>
                     </div>
 
-                    <div className="flex w-full justify-center gap-x-4">
+                    <div className="flex w-full justify-center gap-x-4 max-sm:flex-col max-sm:gap-y-4 max-sm:px-2">
                         <Link className="btn text-2xl" href="/skills">
                             <FaCode />
                             Explore my skills

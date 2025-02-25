@@ -58,7 +58,7 @@ export default function TechStack() {
                 transition={{ type: 'spring' }}
                 src={pug}
                 alt="Tech Stack"
-                className="w-54 absolute -bottom-[18px] -right-[36px] h-72 origin-bottom object-cover drop-shadow-xl"
+                className="w-54 absolute -right-[36px] origin-bottom object-cover drop-shadow-xl max-sm:hidden sm:bottom-0 sm:h-56 lg:-bottom-[18px] lg:h-72"
             />
         </motion.div>
     );
