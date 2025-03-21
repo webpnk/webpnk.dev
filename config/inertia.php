@@ -20,11 +20,8 @@ return [
     */
 
     'ssr' => [
-
-        'enabled' => env('SSR_ENABLE', true),
-
-        'url' => env('SSR_URL', 'http://ssr:13714'),
-
+        'enabled' => true,
+        'url' => 'http://127.0.0.1:13714',
         // 'bundle' => base_path('bootstrap/ssr/ssr.mjs'),
 
     ],
